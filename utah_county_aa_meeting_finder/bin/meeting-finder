@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-#require_relative "../lib/utah_county_aa_meeting_finder"
+require_relative '../lib/utah_county_aa_meeting_finder'
 
-#MeetingFinder::CLI.new.call
-
-puts "hello"
+CLI.new.call
