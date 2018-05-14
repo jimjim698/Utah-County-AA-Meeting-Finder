@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "utah/county/aa/meeting/finder/version"
+require "utah_county_aa_meeting_finder/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "utah-county-aa-meeting-finder"
-  spec.version       = Utah::County::Aa::Meeting::Finder::VERSION
+  spec.name          = "utah_county_aa_meeting_finder"
+  spec.version       = UtahCountyAaMeetingFinder::VERSION
   spec.authors       = ["'James Lotruglio'"]
   spec.email         = ["'jimlotruglio@yahoo.com'"]
 
