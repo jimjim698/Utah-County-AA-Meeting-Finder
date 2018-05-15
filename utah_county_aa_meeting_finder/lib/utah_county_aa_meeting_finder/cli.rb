@@ -8,6 +8,7 @@ def call
     puts "1. Dopeless Hopefiends"
     puts "2. New beginnings"
     puts "3. Time to wake up"
+    binding.pry
   end
 
 puts "Please select the number of the meeting you would like the address to."
