@@ -1,4 +1,4 @@
-class CLI
+class UtahCountyAaMeetingFinder::CLI
 
 def call
   puts "Welcome to Utah County AA Meeting Finder"
