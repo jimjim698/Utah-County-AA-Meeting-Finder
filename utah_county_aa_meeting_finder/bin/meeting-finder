@@ -2,4 +2,6 @@
 
 require_relative '../lib/utah_county_aa_meeting_finder'
 
-UtahCountyAaMeetingFinder::CLI.new.call
+#UtahCountyAaMeetingFinder::CLI.new.call
+
+UtahCountyAaMeetingFinder::Scraper.scrape_index_page("http://www.utahaa.org/central.php")
