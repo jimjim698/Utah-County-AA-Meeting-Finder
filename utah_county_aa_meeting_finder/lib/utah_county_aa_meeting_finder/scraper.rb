@@ -1,3 +1,3 @@
-class Scraper
+class UtahCountyAaMeetingFinder::Scraper
 
-end 
+end
