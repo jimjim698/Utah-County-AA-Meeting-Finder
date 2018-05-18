@@ -1,14 +1,16 @@
 class UtahCountyAaMeetingFinder::Scraper
 
-  def self.scrape_index_page(index_url)
-  new_array=[]
+  def scrape_index_page(index_url)
+
   doc = Nokogiri::HTML(open(index_url))
   meetings = doc.css("table")
-  meetings.collect do |meeting|
-  new_array << {:date => meeting.css("span .style14").text} #, :location => student.css(".student-location").text, :profile_url =>   student.css("a").attribute("href").text}
-  binding.pry
-  end
-  new_array
+#, :location => student.css(".student-location").text, :profile_url =>   student.css("a").attribute("href").text}
+end
+
+def make_meetings(url)
+ self.scrape_index_page(url).each do |meeting|
+   UtahCountyAaMeetingFinder::Meetings.new_meetings(meeting)
+ end
 end
 
 

@@ -10,6 +10,7 @@ end
 def list_meetings
   puts "Please pick a day you would like to view meetings for"
   input = gets.strip
+  binding.pry
   if input.downcase == "sunday"
     puts "1. Dopeless Hopefiends"
     puts "2. New beginnings"
