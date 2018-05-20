@@ -10,13 +10,29 @@ end
 def list_meetings
   puts "Please pick a day you would like to view meetings for"
   input = gets.strip
-
-  if input.downcase == "sunday"
-    puts "1. Dopeless Hopefiends"
-    puts "2. New beginnings"
-    puts "3. Time to wake up"
+  if input.downcase == "monday"
+    UtahCountyAaMeetingFinder::Meetings.monday
       meeting_address
-  end
+
+    elsif input.downcase == "tuesday"
+      UtahCountyAaMeetingFinder::Meetings.tuesday
+        meeting_address
+      elsif input.downcase == "wednesday"
+        UtahCountyAaMeetingFinder::Meetings.wednesday
+          meeting_address
+        elsif input.downcase == "thursday"
+          UtahCountyAaMeetingFinder::Meetings.thursday
+            meeting_address
+          elsif input.downcase == "friday"
+            UtahCountyAaMeetingFinder::Meetings.friday
+              meeting_address
+            elsif input.downcase == "saturday"
+              UtahCountyAaMeetingFinder::Meetings.saturday
+                meeting_address
+              elsif input.downcase == "sunday"
+                UtahCountyAaMeetingFinder::Meetings.sunday
+                  meeting_address
+end
 end
 
 def meeting_address

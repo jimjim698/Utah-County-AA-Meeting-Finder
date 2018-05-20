@@ -12,6 +12,11 @@ class UtahCountyAaMeetingFinder::Meetings
     @@all<<self
   end
 
+def self.monday
+  puts "1. Dopeless Hopefiends"
+  puts "2. New beginnings"
+  puts "3. Time to wake up"
+end 
 
 
 
