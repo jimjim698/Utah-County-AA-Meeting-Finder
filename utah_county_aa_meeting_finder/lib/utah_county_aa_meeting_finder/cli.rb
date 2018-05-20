@@ -32,6 +32,9 @@ def list_meetings
               elsif input.downcase == "sunday"
                 UtahCountyAaMeetingFinder::Meetings.sunday
                   meeting_address
+                else
+                  puts "I'm sorry, I don't understand"
+                  list_meetings
 end
 end
 
