@@ -10,7 +10,7 @@ end
 def list_meetings
   puts "Please pick a day you would like to view meetings for"
   input = gets.strip
-  binding.pry
+
   if input.downcase == "sunday"
     puts "1. Dopeless Hopefiends"
     puts "2. New beginnings"
@@ -22,7 +22,6 @@ end
 def meeting_address
 puts "Please select the number of the meeting you would like the address to."
 input = nil
-while input != "exit"
   input = gets.strip
 
   if input.to_i == 1
@@ -30,11 +29,17 @@ while input != "exit"
 
 elsif input.to_i == 2
     puts "fellowship hall"
+  elsif input.downcase == "exit"
+    goodbye
   else
     puts "Im not sure what that means"
     list_meetings
   end
 end
+
+
+def goodbye
+  puts "Thanks for checking in!"
 end
 
 end
