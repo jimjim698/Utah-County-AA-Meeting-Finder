@@ -8,8 +8,12 @@ class UtahCountyAaMeetingFinder::Scraper
 end
 
 def make_meetings(url)
+  new = []
  self.scrape_index_page(url).each do |meeting|
-   UtahCountyAaMeetingFinder::Meetings.new_meetings(meeting)
+  new<< UtahCountyAaMeetingFinder::Meetings.new_meetings(meeting)
+ end
+ new.each do |this|
+   puts "#{this.name}"
  end
 end
 

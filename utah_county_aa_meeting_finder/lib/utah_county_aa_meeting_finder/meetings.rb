@@ -4,7 +4,7 @@ class UtahCountyAaMeetingFinder::Meetings
 @@all=["dumb and alive", "live free or die hard"]
 
   def self.new_meetings(meeting)
-    self.new(meeting.css("span .style14"))
+    self.new(meeting.css("span .style12").text)
   end
 
   def initialize(name = nil)
