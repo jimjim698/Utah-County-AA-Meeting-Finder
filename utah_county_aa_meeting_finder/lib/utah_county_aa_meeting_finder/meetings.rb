@@ -1,10 +1,10 @@
 class UtahCountyAaMeetingFinder::Meetings
   attr_accessor :name, :address, :date
 
-@@all=["dumb and alive", "live free or die hard"]
+@@all=[]
 
   def self.new_meetings(meeting)
-    self.new(meeting.css("span .style12").text)
+    self.new(meeting.css("span .style12"))
   end
 
   def initialize(name = nil)
