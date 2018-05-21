@@ -4,7 +4,7 @@ class UtahCountyAaMeetingFinder::Meetings
 @@all=[]
 
   def self.new_meetings(meeting)
-    new = self.new(meeting.css(".groupmtgsm").text, meeting.css(".day u").text, meeting.css(".smaller").text, meeting.css("td .day .marq (text)"))
+    new = self.new(meeting.css(".groupmtgsm").text, meeting.css(".day u").text, meeting.css(".smaller").text, meeting.css("t"))
 
   end
 
@@ -17,8 +17,14 @@ class UtahCountyAaMeetingFinder::Meetings
   end
 
 def self.monday
-  @@all.each_with_index do |meeting, index|
-    puts "#{index+1}. #{meeting}"
+  monday_meetings = []
+  @@all.each do |meeting|
+    if meeting.date.downcase == "monday"
+      monday_meetings<< meeting
+      monday_meetings.each_with_index do |meeting, index|
+    puts "#{index+1}. #{meeting.name}"
+      end
+    end
   end
 end
 

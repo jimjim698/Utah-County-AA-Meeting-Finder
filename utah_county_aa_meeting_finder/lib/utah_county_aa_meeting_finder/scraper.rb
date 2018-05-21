@@ -15,10 +15,7 @@ def make_meetings(url)
   new<< UtahCountyAaMeetingFinder::Meetings.new_meetings(meeting)
 
  end
- new.each do |this|
-   puts "#{this.name} on #{this.date} in #{this.address} at #{this.time}"
 
- end
 end
 
 

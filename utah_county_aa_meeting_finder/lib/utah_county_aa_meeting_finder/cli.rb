@@ -2,6 +2,7 @@ class UtahCountyAaMeetingFinder::CLI
 
 def call
   puts "Welcome to Utah County AA Meeting Finder"
+  UtahCountyAaMeetingFinder::Scraper.new.make_meetings("http://www.simeetings.com/LA/UT/OremMtgs.html")
 list_meetings
 end
 
