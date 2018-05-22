@@ -19,9 +19,21 @@ class UtahCountyAaMeetingFinder::Meetings
 def self.monday
   monday_meetings = []
   @@all.each do |meeting|
-    if meeting.date.downcase == "monday"
+    if meeting.date == "Monday"
       monday_meetings<< meeting
       monday_meetings.each_with_index do |meeting, index|
+    puts "#{index+1}. #{meeting.name}"
+      end
+    end
+  end
+end
+
+def self.tuesday
+  tuesday_meetings = []
+  @@all.each do |meeting|
+    if meeting.date == "Tuesday"
+      tuesday_meetings<< meeting
+      tuesday_meetings.each_with_index do |meeting, index|
     puts "#{index+1}. #{meeting.name}"
       end
     end
