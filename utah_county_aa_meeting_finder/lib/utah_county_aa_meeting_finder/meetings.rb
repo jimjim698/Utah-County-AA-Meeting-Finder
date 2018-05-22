@@ -2,6 +2,7 @@ class UtahCountyAaMeetingFinder::Meetings
   attr_accessor :name, :address, :date, :time
 
 @@all=[]
+@@chosen_meetings = []
 
   def self.new_meetings(meeting)
     new = self.new(meeting.css(".groupmtgsm").text, meeting.css(".day u").text, meeting.css(".smaller").text, meeting.css("t"))
@@ -23,10 +24,10 @@ def self.monday
       monday_meetings<< meeting
       monday_meetings.each_with_index do |meeting, index|
     puts "#{index+1}. #{meeting.name}"
+    @@chosen_meetings<<meeting
       end
     end
   end
-  binding.pry
 end
 
 def self.tuesday
@@ -36,6 +37,7 @@ def self.tuesday
       tuesday_meetings<< meeting
       tuesday_meetings.each_with_index do |meeting, index|
     puts "#{index+1}. #{meeting.name}"
+    @@chosen_meetings<<meeting
       end
     end
   end
@@ -48,6 +50,7 @@ def self.wednesday
       wednesday_meetings<< meeting
       wednesday_meetings.each_with_index do |meeting, index|
     puts "#{index+1}. #{meeting.name}"
+    @@chosen_meetings<<meeting
       end
     end
   end
@@ -60,6 +63,7 @@ def self.thursday
       thursday_meetings<< meeting
       thursday_meetings.each_with_index do |meeting, index|
     puts "#{index+1}. #{meeting.name}"
+    @@chosen_meetings<<meeting
       end
     end
   end
@@ -72,6 +76,7 @@ def self.friday
       friday_meetings<< meeting
       friday_meetings.each_with_index do |meeting, index|
     puts "#{index+1}. #{meeting.name}"
+    @@chosen_meetings<<meeting
       end
     end
   end
@@ -84,6 +89,7 @@ def self.saturday
       saturday_meetings<< meeting
       saturday_meetings.each_with_index do |meeting, index|
     puts "#{index+1}. #{meeting.name}"
+    @@chosen_meetings<<meeting
       end
     end
   end
@@ -96,10 +102,14 @@ def self.sunday
       sunday_meetings<< meeting
       sunday_meetings.each_with_index do |meeting, index|
     puts "#{index+1}. #{meeting.name}"
+    @@chosen_meetings<<meeting
       end
     end
   end
 end
 
+def self.address
+  @@chosen_meetings
+end
 
 end
