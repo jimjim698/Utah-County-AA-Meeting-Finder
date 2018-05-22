@@ -5,8 +5,10 @@ class UtahCountyAaMeetingFinder::Meetings
 @@chosen_meetings = []
 
   def self.new_meetings(meeting)
-    new = self.new(meeting.css(".groupmtgsm").text, meeting.css(".day u").text, meeting.css(".smaller").text, meeting.css("t"))
- binding.pry
+    if meeting.css(".groupmtgsm").text != ""
+      new = self.new(meeting.css(".groupmtgsm").text, meeting.css(".day u").text, meeting.css(".marq a").attribute('href').text, meeting.css(".day").text.split("\n")[1])
+
+    end
   end
 
   def initialize(name = nil, date = nil, address = nil, time = nil)
@@ -21,29 +23,32 @@ class UtahCountyAaMeetingFinder::Meetings
 def self.monday
   monday_meetings = []
   @@all.each do |meeting|
+
     if meeting.date == "Monday"
       monday_meetings<< meeting
-      monday_meetings.each_with_index do |meeting, index|
-    puts "#{index+1}. #{meeting.name} #{meeting.time}"
-    @@chosen_meetings<<meeting
+
       end
     end
+
+    monday_meetings.each_with_index do |meeting, index|
+  puts "#{index+1}. #{meeting.name} #{meeting.time}"
+  @@chosen_meetings<<meeting
   end
-end 
+end
 
 =begin
 def self.monday
   monday_meetings = []
   @@all.each do |meeting|
     if meeting.date == "Monday"
-      monday_meetings<< meeting 
+      monday_meetings<< meeting
       monday_meetings.each do |meeting|
         puts "#{meeting.name}"
-      end 
+      end
     end
   end
-end 
-=end 
+end
+=end
 
 def self.tuesday
   tuesday_meetings = []
