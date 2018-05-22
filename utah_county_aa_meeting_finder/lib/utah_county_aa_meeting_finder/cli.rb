@@ -61,7 +61,7 @@ end
 #end
 
 def meeting_address
-puts "Please select the number of the meeting you would like the address to."
+puts "Please select the number of the meeting you would like directions for."
 meetings = UtahCountyAaMeetingFinder::Meetings.address
   input = gets.strip
   corrected_input = input.to_i - 1

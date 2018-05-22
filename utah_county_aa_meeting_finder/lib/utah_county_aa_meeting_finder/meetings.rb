@@ -23,43 +23,28 @@ class UtahCountyAaMeetingFinder::Meetings
 def self.monday
   monday_meetings = []
   @@all.each do |meeting|
-
     if meeting.date == "Monday"
       monday_meetings<< meeting
-
       end
     end
-
     monday_meetings.each_with_index do |meeting, index|
-  puts "#{index+1}. #{meeting.name} #{meeting.time}"
+  puts "#{index+1}. #{meeting.time} #{meeting.name}"
   @@chosen_meetings<<meeting
   end
 end
 
-=begin
-def self.monday
-  monday_meetings = []
-  @@all.each do |meeting|
-    if meeting.date == "Monday"
-      monday_meetings<< meeting
-      monday_meetings.each do |meeting|
-        puts "#{meeting.name}"
-      end
-    end
-  end
-end
-=end
+
 
 def self.tuesday
   tuesday_meetings = []
   @@all.each do |meeting|
     if meeting.date == "Tuesday"
       tuesday_meetings<< meeting
-      tuesday_meetings.each_with_index do |meeting, index|
-    puts "#{index+1}. #{meeting.name} #{meeting.time}"
-    @@chosen_meetings<<meeting
       end
     end
+    tuesday_meetings.each_with_index do |meeting, index|
+  puts "#{index+1}. #{meeting.time} #{meeting.name}"
+  @@chosen_meetings<<meeting
   end
 end
 
@@ -68,11 +53,11 @@ def self.wednesday
   @@all.each do |meeting|
     if meeting.date == "Wednesday"
       wednesday_meetings<< meeting
-      wednesday_meetings.each_with_index do |meeting, index|
-    puts "#{index+1}. #{meeting.name} #{meeting.time}"
-    @@chosen_meetings<<meeting
       end
     end
+    wednesday_meetings.each_with_index do |meeting, index|
+    puts "#{index+1}. #{meeting.time} #{meeting.name}"
+    @@chosen_meetings<<meeting
   end
 end
 
@@ -81,11 +66,11 @@ def self.thursday
   @@all.each do |meeting|
     if meeting.date == "Thursday"
       thursday_meetings<< meeting
-      thursday_meetings.each_with_index do |meeting, index|
-    puts "#{index+1}. #{meeting.name} #{meeting.time}"
-    @@chosen_meetings<<meeting
       end
     end
+    thursday_meetings.each_with_index do |meeting, index|
+  puts "#{index+1}. #{meeting.time} #{meeting.name}"
+  @@chosen_meetings<<meeting
   end
 end
 
@@ -94,11 +79,11 @@ def self.friday
   @@all.each do |meeting|
     if meeting.date == "Friday"
       friday_meetings<< meeting
-      friday_meetings.each_with_index do |meeting, index|
-    puts "#{index+1}. #{meeting.name} #{meeting.time}"
-    @@chosen_meetings<<meeting
       end
     end
+    friday_meetings.each_with_index do |meeting, index|
+  puts "#{index+1}. #{meeting.time} #{meeting.name}"
+  @@chosen_meetings<<meeting
   end
 end
 
@@ -107,11 +92,11 @@ def self.saturday
   @@all.each do |meeting|
     if meeting.date == "Saturday"
       saturday_meetings<< meeting
-      saturday_meetings.each_with_index do |meeting, index|
-    puts "#{index+1}. #{meeting.name} #{meeting.time}"
-    @@chosen_meetings<<meeting
       end
     end
+    saturday_meetings.each_with_index do |meeting, index|
+  puts "#{index+1}. #{meeting.time} #{meeting.name}"
+  @@chosen_meetings<<meeting
   end
 end
 
@@ -120,11 +105,11 @@ def self.sunday
   @@all.each do |meeting|
     if meeting.date == "Sunday"
       sunday_meetings<< meeting
-      sunday_meetings.each_with_index do |meeting, index|
-    puts "#{index+1}. #{meeting.name} #{meeting.time}"
-    @@chosen_meetings<<meeting
       end
     end
+    sunday_meetings.each_with_index do |meeting, index|
+  puts "#{index+1}. #{meeting.time} #{meeting.name}"
+  @@chosen_meetings<<meeting
   end
 end
 
