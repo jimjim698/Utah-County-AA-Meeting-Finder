@@ -68,7 +68,13 @@ meetings = UtahCountyAaMeetingFinder::Meetings.address
   selected_meeting = meetings[corrected_input]
 puts  "#{selected_meeting.address}"
 
-
+puts "Would you like to see more meetings? Type yes or no."
+input = gets.strip
+  if input.downcase == "yes"
+  list_meetings
+  elsif input.downcase == "no"
+    goodbye
+  end
 end
 
 
