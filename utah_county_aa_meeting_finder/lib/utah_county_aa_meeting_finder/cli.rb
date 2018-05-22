@@ -42,40 +42,28 @@ def list_meetings
 end
 end
 
-#def meeting_address
-#puts "Please select the number of the meeting you would like the address to."
-#input = nil
-#  input = gets.strip
-
-#  if input.to_i == 1
-#  puts  "Alano Club"
-
-#elsif input.to_i == 2
-#    puts "fellowship hall"
-#  elsif input.downcase == "exit"
-#    goodbye
-#  else
-#    puts "Im not sure what that means"
-#    list_meetings
-#  end
-#end
 
 def meeting_address
 puts "Please select the number of the meeting you would like directions for."
 meetings = UtahCountyAaMeetingFinder::Meetings.address
   input = gets.strip
-  corrected_input = input.to_i - 1
-  selected_meeting = meetings[corrected_input]
-puts  "#{selected_meeting.address}"
-
-puts "Would you like to see more meetings? Type yes or no."
-input = gets.strip
-  if input.downcase == "yes"
-  list_meetings
-  elsif input.downcase == "no"
+    if input.downcase == "exit"
     goodbye
+    else
+      corrected_input = input.to_i - 1
+      selected_meeting = meetings[corrected_input]
+      puts  "#{selected_meeting.address}"
+
+      puts "Would you like to see more meetings? Type yes or no."
+      input = gets.strip
+      if input.downcase == "yes"
+        list_meetings
+      elsif input.downcase == "no"
+        goodbye
+    end
   end
 end
+
 
 
 def goodbye
