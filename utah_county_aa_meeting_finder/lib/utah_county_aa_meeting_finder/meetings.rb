@@ -112,4 +112,8 @@ def self.address
   @@chosen_meetings
 end
 
+def self.meeting_reset
+  @@chosen_meetings.clear
+end
+
 end
