@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'James Lotruglio'"]
   spec.email         = ["'jimlotruglio@yahoo.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Find all AA meetings in Utah county."
+  spec.description   = "Provides a search engine for all AA meetings in the Utah County area"
+  spec.homepage      = "git@github.com:jimjim698/utah-county-aa-meeting-finder.git"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
