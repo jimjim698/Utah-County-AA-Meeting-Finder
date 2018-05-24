@@ -113,7 +113,7 @@ def self.sunday
   end
 end
 
-def self.address
+def self.choose_address
   @@chosen_meetings
 end
 
