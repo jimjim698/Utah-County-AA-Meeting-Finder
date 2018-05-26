@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Find all AA meetings in Utah county."
   spec.description   = "Provides a search engine for all AA meetings in the Utah County area"
-  spec.homepage      = "git@github.com:jimjim698/utah-county-aa-meeting-finder.git"
+  spec.homepage      = "https://www.github.com/jimjim698/utah-county-aa-meeting-finder"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
