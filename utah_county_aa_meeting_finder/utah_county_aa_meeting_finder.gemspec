@@ -8,7 +8,6 @@ Gem::Specification.new do |spec|
   spec.version       = UtahCountyAaMeetingFinder::VERSION
   spec.authors       = ["'James Lotruglio'"]
   spec.email         = ["'jimlotruglio@yahoo.com'"]
-  spec.executables << "meeting-finder"
   spec.summary       = "Find all AA meetings in Utah county."
   spec.description   = "Provides a search engine for all AA meetings in the Utah County area"
   spec.homepage      = "https://www.github.com/jimjim698/utah-county-aa-meeting-finder"
