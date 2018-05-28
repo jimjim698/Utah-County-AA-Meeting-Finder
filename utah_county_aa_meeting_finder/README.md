@@ -11,8 +11,8 @@ This Ruby Gem provides a way for Utah County residents to find Alcoholics Anonym
 
 ## Usage
  Type the following after installing this gem.
- 
-$ meeting_finder
+
+$ meeting-finder
 
 ## Development
 
