@@ -11,19 +11,9 @@ Gem::Specification.new do |spec|
   spec.summary       = "Find all AA meetings in Utah county."
   spec.description   = "Provides a search engine for all AA meetings in the Utah County area"
   spec.homepage      = "https://www.github.com/jimjim698/utah-county-aa-meeting-finder"
-
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
-
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
+  spec.files         = ["lib/utah_county_aa_meeting_finder.rb","lib/utah_county_aa_meeting_finder/cli.rb", "lib/utah_county_aa_meeting_finder/meetings.rb", "lib/utah_county_aa_meeting_finder/scraper.rb", "config/environment.rb"]
   spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.executables   = ["meeting-finder"]
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.16"
