@@ -11,36 +11,9 @@ end
 def list_meetings
   puts "Please pick a day you would like to view meetings for"
   input = gets.strip
-  # if input.downcase == "monday"
-  #   binding.pry
-  #   UtahCountyAaMeetingFinder::Meetings.monday
-  #     meeting_address
-  #
-  #   elsif input.downcase == "tuesday"
-  #     UtahCountyAaMeetingFinder::Meetings.tuesday
-  #       meeting_address
-  #     elsif input.downcase == "wednesday"
-  #       UtahCountyAaMeetingFinder::Meetings.wednesday
-  #         meeting_address
-  #       elsif input.downcase == "thursday"
-  #         UtahCountyAaMeetingFinder::Meetings.thursday
-  #           meeting_address
-  #         elsif input.downcase == "friday"
-  #           UtahCountyAaMeetingFinder::Meetings.friday
-  #             meeting_address
-  #           elsif input.downcase == "saturday"
-  #             UtahCountyAaMeetingFinder::Meetings.saturday
-  #               meeting_address
-  #             elsif input.downcase == "sunday"
-  #               UtahCountyAaMeetingFinder::Meetings.sunday
-  #                 meeting_address
-  #               elsif
-  #                 input.downcase == "exit"
-  #                 goodbye
-  #               else
+
   if ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].include? input.downcase
-    # do this now
-  display_meetings(input)
+   display_meetings(input)
     meeting_address(input)
   else
     puts "I'm sorry, I don't understand"
@@ -51,10 +24,8 @@ end
 def display_meetings(day)
   UtahCountyAaMeetingFinder::Meetings.find_by_day(day).each_with_index do |meeting, index|
    puts "#{index+1}. #{meeting.time} #{meeting.name}"
+  end
  end
-  # iterate through Meeting.find_by_day(day)
-  # print the info you want
-end
 
 def meeting_address(day)
 puts "Please select the number of the meeting you would like directions for."
