@@ -40,7 +40,9 @@ def list_meetings
   #               else
   if ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].include? input.downcase
     # do this now
-    # UtahCountyAaMeetingFinder::Meetings.find_by_day(input)
+    UtahCountyAaMeetingFinder::Meetings.find_by_day(input).each_with_index do |meeting, index|
+     puts "#{index+1}. #{meeting.time} #{meeting.name}"
+   end 
     meeting_address(input)
   else
     puts "I'm sorry, I don't understand"
