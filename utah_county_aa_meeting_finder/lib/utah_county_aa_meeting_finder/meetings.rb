@@ -2,12 +2,10 @@ class UtahCountyAaMeetingFinder::Meetings
   attr_accessor :name, :address, :date, :time
 
 @@all=[]
-@@chosen_meetings = []
 
   def self.new_meetings(meeting)
     if meeting.css(".groupmtgsm").text != ""
       new = self.new(meeting.css(".groupmtgsm").text, meeting.css(".day u").text, meeting.css(".marq a").attribute('href').text, meeting.css(".day").text.split("\n")[1])
-
     end
   end
 

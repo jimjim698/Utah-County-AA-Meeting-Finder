@@ -7,12 +7,14 @@ list_meetings
 end
 
 
-
 def list_meetings
   puts "Please pick a day you would like to view meetings for"
   input = gets.strip
 
-  if ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].include? input.downcase
+  if input.downcase == "exit"
+    goodbye
+
+  elsif  ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"].include? input.downcase
    display_meetings(input)
     meeting_address(input)
   else
@@ -35,6 +37,9 @@ meetings = UtahCountyAaMeetingFinder::Meetings.find_by_day(day)
   input = gets.strip
     if input.downcase == "exit"
     goodbye
+  elsif input.to_i > meetings.size
+    puts "There are only #{meetings.size} meetings for this day"
+    meeting_address(day)
     else
       corrected_input = input.to_i - 1
       selected_meeting = meetings[corrected_input]
@@ -49,7 +54,6 @@ meetings = UtahCountyAaMeetingFinder::Meetings.find_by_day(day)
     end
   end
 end
-
 
 
 def goodbye
