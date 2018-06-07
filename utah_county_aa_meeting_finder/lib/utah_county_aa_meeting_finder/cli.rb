@@ -58,7 +58,9 @@ end
 
 def meeting_address(day)
 puts "Please select the number of the meeting you would like directions for."
-meetings = UtahCountyAaMeetingFinder::Meetings.chosen_address
+
+
+meetings = UtahCountyAaMeetingFinder::Meetings.find_by_day(day)
   input = gets.strip
     if input.downcase == "exit"
     goodbye
